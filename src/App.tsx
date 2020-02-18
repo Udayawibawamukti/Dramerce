@@ -3,19 +3,26 @@ import { AppRegistry } from 'react-native';
 import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import { NavigationContainer } from '@react-navigation/native';
 import { StyleSheet, Text, View } from 'react-native';
+import MyTabs from './components/TopNavBar'
 
 export default function App() {
 
 
   const theme = {
-    ...DefaultTheme
-  }
+    ...DefaultTheme,
+    roundness: 2,
+    colors: {
+      ...DefaultTheme.colors,
+      primary: '#3498db',
+      accent: '#f1c40f',
+    },
+  };
 
   return (
     <PaperProvider theme={theme}>
       <NavigationContainer>
-        <View style={styles.container}>
-          <Text>Open up App.tsx to start working on your app!</Text>
+        <View>
+        <MyTabs />
         </View>
       </NavigationContainer>
     </PaperProvider>
