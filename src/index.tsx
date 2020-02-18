@@ -9,7 +9,7 @@ const AppIndex = createAppContainer(AppNavigator)
 export default class App extends Component{  
     render(){  
         return(  
-            <View style={{flex:1}} >  
+            <View style={{flex:1}}>  
                 <StatusBar  
                     backgroundColor='red'  
                     barStyle='light-content'  
