@@ -11,7 +11,8 @@ const AppNavigator = createMaterialBottomTabNavigator(
       Setting: { screen: SettingsScreen },
     },
     {
-      initialRouteName: 'Home'
+      initialRouteName: 'Home',
+      activeColor: '#F44336',
     },
   );
 export default createAppContainer(AppNavigator); 
