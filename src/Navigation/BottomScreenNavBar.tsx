@@ -1,5 +1,5 @@
-import {createAppContainer } from 'react-navigation';
-import {createMaterialTopTabNavigator} from 'react-navigation-tabs'
+import { createAppContainer } from 'react-navigation';  
+// import {createMaterialBottomTabNavigator} from 'react-navigation-tabs'
 import HomeScreen from "../screens/index"; 
 import ProfileScreen from "../screens/profile";  
 import SettingScreen from "../screens/settings";  
