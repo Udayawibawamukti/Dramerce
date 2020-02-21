@@ -1,6 +1,7 @@
 import React, {Component} from 'react';  
 import {View,Text} from 'react-native';  
 import Icon from 'react-native-vector-icons/Ionicons';  
+
 export default class ProfileScreen extends Component{
     static navigationOptions: { tabBarIcon: ({ tintColor, focused }: { tintColor: any; focused: any; }) => JSX.Element; };  
     render(){  
