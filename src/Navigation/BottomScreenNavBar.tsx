@@ -3,18 +3,18 @@ import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom
 import HomeScreen from '../screens/home'; 
 import ProfileScreen from '../screens/profile';  
 import SettingsScreen from '../screens/settings';  
-import ReactNativeStormpath from '../LoginFunctionality/index'
+import Login from '../screens/login'
   
 const AppNavigator = createMaterialBottomTabNavigator(
     {
       Home: { screen: HomeScreen },
       Profile: { screen: ProfileScreen },
       Setting: { screen: SettingsScreen },
-      Login: { screen: ReactNativeStormpath}
+      Login: { screen: Login}
     },
     {
       initialRouteName: 'Home',
-      activeColor: '#F44336',
+      activeColor: '#ffffff',
     },
   );
-export default createAppContainer(AppNavigator); 
+export default createAppContainer(AppNavigator);

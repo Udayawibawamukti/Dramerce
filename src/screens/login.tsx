@@ -4,27 +4,29 @@ import {
     Text,
     TextInput,
     View,
-    Button,
     AppRegistry,
     StyleSheet,
     
 } from 'react-native';
-import { blue } from 'color-name';
+import { Button } from 'exoflex'
 
-export default function ReactNativeStormpath(){
+export default function Login(){
     
     let [isLoggedIn, setIsLoggedIn] = useState(false)
     
     if (isLoggedIn){
         return (
-            <ScrollView contentContainerStyle={{padding: 20}}>
-            <Text 
-                style={{fontSize: 27}}>
-                Welcome
-            </Text>
-            <View style={{margin:20}} />
-            <Button onPress={() => setIsLoggedIn(false)} title="Logout"/>
-            </ScrollView>
+            <View>
+                <Text style={{
+                    fontSize: 27, 
+                    alignSelf: 'center',
+                    right:5,
+                    top:200
+                    }}>
+                        CREATE PROFILE PAGE HERE
+                    </Text>
+                    <Button>Logout button</Button>
+            </View>
         )
     }
     else{
@@ -36,7 +38,9 @@ export default function ReactNativeStormpath(){
                 <TextInput style={styles.username} placeholder='Username' />
                 <TextInput style={styles.password} placeholder='Password' />
                 <View style={styles.submit} >
-                    <Button title="Submit" onPress={() => setIsLoggedIn(true)}/>
+                    <Button onPress={() => setIsLoggedIn(true)}>
+                        Submit
+                    </Button>
                 </View>
             </ScrollView>
         )
@@ -47,7 +51,8 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 27,
         alignSelf: 'center',
-        right:5
+        right:5,
+        textDecorationLine: 'underline'
     },
     form: {
         alignItems: 'flex-start',
@@ -80,9 +85,12 @@ const styles = StyleSheet.create({
         top:80,
         right:7,
         marginHorizontal:0
+    },
+    button: {
+        color: 'red'
     }
 })
 
 
 
-AppRegistry.registerComponent('ReactNativeStormpath' , () => ReactNativeStormpath );
+AppRegistry.registerComponent('Login' , () => Login );

@@ -2,32 +2,30 @@ import React from 'react';
 import { AppRegistry } from 'react-native';
 import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 import { NavigationContainer } from '@react-navigation/native';
-import { StyleSheet, Text, View } from 'react-native';
 import AppNavigator from './Navigation/BottomScreenNavBar'
+import StackNavigator from './Navigation/StackNavigator'
+import ProfileButtonIcon from './buttons/ProfileButtonIcon'
 
 export default function App() {
 
 
   const theme = {
-    ...DefaultTheme
+    ...DefaultTheme,
+    colors: {
+      ...DefaultTheme.colors,
+      primary: '#0000ff'
+    }
   }
 
   return (
     <PaperProvider theme={theme}>
       <NavigationContainer>
-          <AppNavigator />
+        <AppNavigator />
+        <StackNavigator/>
+        <ProfileButtonIcon />
       </NavigationContainer>
     </PaperProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
 
 AppRegistry.registerComponent('app', () => App);
