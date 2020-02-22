@@ -1,5 +1,5 @@
 import React, {Component} from 'react';  
-import { SafeAreaView, Text, StyleSheet, TouchableHighlight, Button} from 'react-native';  
+import { SafeAreaView, Text, StyleSheet} from 'react-native';  
 import Icon from 'react-native-vector-icons/Ionicons';  
 import ProfileButton from '../buttons/ProfileButton'
 
@@ -8,7 +8,7 @@ export default class HomeScreen extends Component{
     render() {  
         return( 
             <SafeAreaView style={{zIndex:1, marginTop:200}}> 
-            <ProfileButton />
+                <ProfileButton />
                 <Text>This is Home Screen</Text>  
             </SafeAreaView>  
         )  
@@ -16,7 +16,7 @@ export default class HomeScreen extends Component{
 }  
 
 HomeScreen.navigationOptions={  
-        tabBarIcon:({tintColor, focused})=>(  
+    tabBarIcon:({tintColor, focused})=>(  
         <Icon  
             name={focused ? 'ios-home' : 'md-home'}  
             color={tintColor}  

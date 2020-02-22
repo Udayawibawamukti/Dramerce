@@ -17,5 +17,4 @@ const style = StyleSheet.create({
         top: -150,
         paddingRight:25
     }
-
 })
